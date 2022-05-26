@@ -28,7 +28,7 @@ inRange min max x = x >= min && x <= max
 fac :: (Ord p, Num p) => p -> p
 fac n
   | n <= 1 = 1
-  | otherwise =  n * fac (n -1)
+  | otherwise = n * fac (n -1)
 
 main :: IO ()
 main = do
@@ -58,21 +58,22 @@ nestedList = do
         then putStrLn "EVEN"
         else putStrLn "Odd"
 
-
 -- Exercises
 
 area :: Fractional a => a -> a
-area x = 3.13 *(x*x)
+area x = 3.13 * (x * x)
 
 doubleMe :: Num a => a -> a
-doubleMe x = x*2
+doubleMe x = x * 2
 
 addMe :: Num a => a -> a -> a
 addMe a b = a + b
 
+myGcd :: Num a => (a, a) -> a
+myGcd (a, b) = a + b
 
--- ascNumber :: Int -> Int -> [Int]
-
--- ascNumber
-
-{--}
+computerAddition :: IO ()
+computerAddition = do
+  a <- readLn
+  b <- readLn
+  print $ myGcd (a, b)
