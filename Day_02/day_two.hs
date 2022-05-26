@@ -1,4 +1,4 @@
-import System.Win32 (COORD (x))
+import System.Win32 (COORD (x, y))
 
 -- Arithmetic function in Haskell
 
@@ -44,3 +44,26 @@ multipleDiffNum x y = x * y
 -- 4
 multipleWithStaticNum :: Num a => a -> p -> a
 multipleWithStaticNum x y = x + 3
+
+-- let x=5; y=6 in x*y can re written as,
+
+multipleDiff :: Integer
+multipleDiff = x * y where x = 5; y = 6
+
+-- Exerxise 2.12
+-- 1. let x = 3; y = 1000 in x * 3 + y
+-- 2. let y = 10; x = 10 * 5 + y in x * 5
+-- 3. let x = 7; y = negate x; z = y * 10 in z / x + y
+
+-- Answers
+-- 1. (\x y -> x*3+y)3 1000
+exerciseOne :: Integer
+exerciseOne = x * y where x = 3; y = 1000
+
+-- exercise two
+exerciseTwo :: Integer
+exerciseTwo = x * 5 where y = 10; x = 10 * 5 + y
+
+-- exercise three
+exerciseThree :: Double
+exerciseThree = z / x + y where x = 7; y = negate x; z = y * 10
