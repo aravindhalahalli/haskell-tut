@@ -8,7 +8,16 @@
 -- Prelude> 1000 + (-9000) or 1000 + (negate 100) or 1000 + 1000 for this case will be wrong to correct way is,
 
 -- Parenthesizing infix functions
+-- Let and Where
 
+-- Explained way of using cabal version two seperate the file
 
+printInc :: (Show a, Num a) => a -> IO ()
+printInc n = print plusTwo
+  where
+    plusTwo = n + 2
 
-
+printInc2 :: (Show a, Num a) => a -> IO ()
+printInc2 n =
+  let plusTwo = n + 2
+   in print plusTwo
