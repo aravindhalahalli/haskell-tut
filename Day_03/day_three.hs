@@ -27,3 +27,11 @@
 
 -- Global vs Local Defination
 
+-- Types of concatenation functions
+
+-- Prelude> :t (++)  
+-- (++) :: [a] -> [a] -> [a]
+-- Prelude> :t concat
+-- concat :: Foldable t => t [a] -> [a]
+
+

@@ -1,6 +1,6 @@
 module Day_03.GlobalLocal where
 
-import GHC.Platform (IntegerLibrary (IntegerGMP))
+-- import GHC.Platform (IntegerLibrary (IntegerGMP))
 
 topLevelFunction :: Integer -> Integer
 topLevelFunction x = x + woot + topLevelValue

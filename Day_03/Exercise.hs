@@ -19,9 +19,20 @@
 
 -- No
 
+-- area1 :: Floating a => p -> a
+-- area1 d = pi * (r * r)
+-- r = d / 2
+
+-- Varibale d not in scope 
+
 -- 4. This code is also from a source file. Now are 𝑟 and 𝑑 in scope
 -- for area?
 -- area d = pi * (r * r)
 -- where r = d / 2
 
 -- No
+
+area :: Floating a => a -> a
+area d = pi * (r * r)
+  where
+    r = d / 2
