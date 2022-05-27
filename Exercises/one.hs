@@ -37,8 +37,8 @@ example = double (size - square (2 + 2))
 
 -- g) take "4 lovely"
 -- <interactive>:40:6: error:
-    -- * Couldn't match expected type `Int' with actual type `[Char]'
-    -- * In the first argument of `take', namely `"lovely"'
+    -- Couldn't match expected type `Int' with actual type `[Char]'
+    -- In the first argument of `take', namely `"lovely"'
     --   In the expression: take "lovely"
     --   In an equation for `it': it = take "lovely"
 
