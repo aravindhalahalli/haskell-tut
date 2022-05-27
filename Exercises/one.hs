@@ -31,16 +31,16 @@ example = double (size - square (2 + 2))
 --     * In the second argument of `(!!)', namely `"hello"'
 --       In the expression: 4 !! "hello"
 --       In an equation for `it': it = 4 !! "hello"
--- 
+--
 -- f ) (!!) "hello" 4
 -- 'o'
 
 -- g) take "4 lovely"
 -- <interactive>:40:6: error:
-    -- Couldn't match expected type `Int' with actual type `[Char]'
-    -- In the first argument of `take', namely `"lovely"'
-    --   In the expression: take "lovely"
-    --   In an equation for `it': it = take "lovely"
+-- Couldn't match expected type `Int' with actual type `[Char]'
+-- In the first argument of `take', namely `"lovely"'
+--   In the expression: take "lovely"
+--   In an equation for `it': it = take "lovely"
 
 -- h) take 3 "awesome"
 -- "lov"
@@ -68,8 +68,16 @@ example = double (size - square (2 + 2))
 -- Given the list-manipulation functions mentioned in this chapter, write functions that take the following inputs and return-
 -- the expected outputs. Do them directly in your REPL and use the take and drop functions you’ve already seen.
 
-
 drop1 :: Int -> String -> IO ()
 drop1 n str = do
   putStrLn (drop n str)
 
+reusableFun :: (Int -> String -> String) -> Int -> String -> IO ()
+reusableFun fun n str = do
+  putStrLn (fun n str)
+
+strConcat :: (String -> String -> String) -> String -> String -> IO ()
+strConcat fun a b = do
+  putStrLn (fun a b)
+
+-- strConcatTwo :: ()
